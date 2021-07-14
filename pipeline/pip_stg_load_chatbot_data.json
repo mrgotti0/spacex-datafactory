@@ -1,6 +1,25 @@
 {
 	"name": "pip_stg_load_chatbot_data",
 	"properties": {
+		"activities": [
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://petstore.swagger.io/v2/pet/findByStatus?status=available",
+					"method": "POST"
+				}
+			}
+		],
 		"annotations": []
 	}
 }
